@@ -13,6 +13,7 @@ const run = async (): Promise<void> => {
     const metrics = new Metrics(new Date(`${metricDate}T00:00:00Z`))
     const repoMetric: IRepoMetric | undefined = await metrics.get()
 
+    console.log(metrics)
     if (repoMetric) {
 //   forget this
       //const db = new Firebase(metricDate)

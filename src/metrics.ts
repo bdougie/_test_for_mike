@@ -19,12 +19,12 @@ export class Metrics {
     //   github.context,
     //   this.metricDate
     // )
-    // const traffic = await githubApi.getTraffic(octokit, github.context)
+    const traffic = await githubApi.getTraffic(octokit, github.context)
 
     // Unless we've successfully gathered all metrics, don't
     // record metrics
-    if (repo && totals) {
-      //  && participation && traffic
+    if (repo && totals && traffic) {
+      //  && participation 
       const prCount =
         totals.repository.closedPRs.totalCount +
         totals.repository.mergedPRs.totalCount +

@@ -10,4 +10,4 @@ jobs:
     steps:
     - uses: bdougie/_test_for_mike@master
       with:
-        githubToken: ${{ secrets.GITHUB_TOKEN }}
+        githubToken: ${{ secrets.BDOUGIE_TOKEN }}

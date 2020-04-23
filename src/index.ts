@@ -14,8 +14,9 @@ const run = async (): Promise<void> => {
     const repoMetric: IRepoMetric | undefined = await metrics.get()
 
     if (repoMetric) {
-      const db = new Firebase(metricDate)
-      await db.save(repoMetric)
+//   forget this
+      //const db = new Firebase(metricDate)
+//       await db.save(repoMetric)
     } else {
       core.error('Unable to gather all metrics')
       core.ExitCode.Failure
